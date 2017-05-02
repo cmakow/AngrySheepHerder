@@ -10,8 +10,8 @@ When playing SheepClicker, players will be able to:
 
 - [ ] Start the game in either training mode or challenge mode
 - [ ] Click sheep to increase score, losing when three sheep have not been clicked
-- [ ] An accuracy rating will be determined by how many clicks landed on a sheep
-- [ ] A high score board based on time the player lasted
+- [ ] Receive an accuracy rating based on how many clicks landed on a sheep
+- [ ] Have a timer to let them know how long they lasted and compare with other players
 
 In addition, this project will include:
 
