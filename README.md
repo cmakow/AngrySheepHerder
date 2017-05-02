@@ -24,7 +24,7 @@ The application is fairly simply represented - everything is on the 640 by 480 c
 
 Home Screen:
 
-![wireframes](Wireframes/sheepclicker.png)
+![wireframes](Wireframes/SheepClicker.png)
 
 Challenge Screen:
 
