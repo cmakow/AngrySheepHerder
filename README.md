@@ -23,13 +23,13 @@ In addition, this project will include:
 The application is fairly simply represented - everything is on the 640 by 480 canvas, with the settings and score information displayed at the top. The game takes place in an approximately 600 by 420 window inside of the canvas. The training screen has options displayed in 3 by 3 grid, and each of them will follow up with a settings screen to adjust the size, sheep duration, and more depending on the mode.
 
 Home Screen:
-![wireframes](wireframes/SheepClicker.png)
+![wireframes](Wireframes/sheepclicker.png)
 
 Challenge Screen:
-![wireframes challenge mode](wireframes/SheepClicker Challenge.png)
+![wireframes challenge mode](Wireframes/sheepclicker-challenge.png)
 
 Training Screen:
-![wireframes training select](wireframes/SheepClicker Training.png)
+![wireframes training select](Wireframes/sheepclicker-training-modes.png)
 
 ### Architecture and Technologies
 
