@@ -39,7 +39,7 @@ Training Screen:
 This project will be implemented with the following technologies:
 
 - `JavaScript` for game logic
-- `Phaser` for game rendering
+- `Pixi.js` for game rendering
 
 In addition to the entry file, there will be three scripts involved in this project:
 
@@ -51,11 +51,11 @@ In addition to the entry file, there will be three scripts involved in this proj
 
 ### Implementation Timeline
 
-**Day 1**: Setup all necessary Node modules and familiarize myself with Phaser. Get basic entry file and bare bones of the three scripts created. Goals:
-- Learn enough Phaser to render objects to the canvas
+**Day 1**: Setup all necessary Node modules and familiarize myself with Pixi. Get basic entry file and bare bones of the three scripts created. Goals:
+- Learn enough Pixi to render objects to the canvas
 - Complete sheep script
 
-**Day 2**: Get more familiar with Phaser, enabling myself to get the board rendered as well as the sheep. In addition, the sheep should be clickable and should be removed when clicked.
+**Day 2**: Get more familiar with Pixi, enabling myself to get the board rendered as well as the sheep. In addition, the sheep should be clickable and should be removed when clicked.
 
 **Day 3**: Work on clicker.js to get score, timers, lives, and other necessary features working. By the end of the day I want to have the entire game complete for challenge mode.
 
