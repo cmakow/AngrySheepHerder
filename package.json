@@ -6,21 +6,23 @@
   "scripts": {
     "postinstall": "webpack"
   },
-  "name": "SheepClicker",
+  "name": "AngrySheepHerder",
   "description": "### Background",
   "version": "1.0.0",
   "main": "webpack.config.js",
-  "dependencies": {},
+  "dependencies": {
+    "webpack": "^2.5.1"
+  },
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cmakow/SheepClicker.git"
+    "url": "git+https://github.com/cmakow/AngrySheepHerder.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cmakow/SheepClicker/issues"
+    "url": "https://github.com/cmakow/AngrySheepHerder/issues"
   },
-  "homepage": "https://github.com/cmakow/SheepClicker#readme"
+  "homepage": "https://github.com/cmakow/AngrySheepHerder#readme"
 }
