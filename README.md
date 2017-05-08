@@ -1,12 +1,12 @@
-# SheepClicker
+# Angry Sheep Herder
 
 ### Background
 
-SheepClicker is a game used to practice and improve mouse accuracy and/or warmup mouse movements for other games.
+Angry Sheep Herder is a game used to practice and improve mouse accuracy and/or warmup mouse movements for other games.
 
 ### MVP Features
 
-When playing SheepClicker, players will be able to:
+When playing Angry Sheep Herder, players will be able to:
 
 - [ ] Start the game in either training mode or challenge mode
 - [ ] Click sheep to increase score, losing when three sheep have not been clicked
