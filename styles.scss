@@ -1,3 +1,57 @@
+/* CSS RESET */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+  font-family: sans-serif;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* STYLING */
+
 .game {
   display: flex;
   margin: 0 auto;
@@ -15,6 +69,8 @@ h1 {
   color: white;
   padding-bottom: 20px;
   padding-top: 20px;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 canvas {
@@ -25,4 +81,51 @@ canvas {
 
 canvas:hover {
   cursor: crosshair;
+}
+
+.rules {
+  color: white;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.rulesList {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.rulesList li {
+  margin: 0 auto;
+  padding: 5px;
+  font-size: 18px;
+}
+
+.footer {
+  margin: 0 auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  margin-top: 10px;
+  border-top: 1px solid yellow;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0 auto;
+}
+
+.footer a {
+  margin: 0 auto;
+  margin-top: 5px;
+  color: yellow;
 }
