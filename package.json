@@ -1,0 +1,26 @@
+{
+  "engines": {
+    "node": "4.1.1",
+    "npm": "2.1.x"
+  },
+  "scripts": {
+    "postinstall": "webpack"
+  },
+  "name": "SheepClicker",
+  "description": "### Background",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmakow/SheepClicker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cmakow/SheepClicker/issues"
+  },
+  "homepage": "https://github.com/cmakow/SheepClicker#readme"
+}
