@@ -4,7 +4,8 @@
     "npm": "2.1.x"
   },
   "scripts": {
-    "postinstall": "webpack"
+    "postinstall": "webpack",
+    "start": "open index.html"
   },
   "name": "AngrySheepHerder",
   "description": "### Background",
