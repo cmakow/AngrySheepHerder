@@ -52,6 +52,45 @@ a {
 
 /* STYLING */
 
+/* HEADER */
+
+.header {
+	display: flex;
+	margin: 0 auto;
+	width: 90%;
+	justify-content: space-between;
+	padding: 10px;
+}
+
+.personalSite {
+	width: 250px;
+	color: white;
+	margin-top: 25px;
+	font-weight: bold;
+}
+
+.title {
+	display: flex;
+}
+
+.titleAvatar {
+	height: 50px;
+	padding: 10px;
+}
+
+.navLinks {
+	width: 250px;
+	display: flex;
+	color: white;
+	font-size: 30px;
+}
+
+.navLinks a {
+	padding: 10px;
+}
+
+/* CANVAS */
+
 .game {
   display: flex;
   margin: 0 auto;
@@ -82,6 +121,8 @@ canvas {
 canvas:hover {
   cursor: crosshair;
 }
+
+/* RULES */
 
 .rules {
   color: white;

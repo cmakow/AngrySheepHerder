@@ -6,9 +6,23 @@
     <img id='background' src='./images/background.png' style='display: none' />
     <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
     <link rel="stylesheet" href="styles.scss">
+    <script src="https://use.fontawesome.com/4c106952d9.js"></script>
   </head>
   <body>
-    <h1>Angry Sheep Herder</h1>
+    <div class='header'>
+      <div class='personalSite'>
+        A <a href='https://cmakow.github.io'>Conrad Makow</a> site.
+      </div>
+      <div class='title'>
+        <img src='./images/sheep_transparent_cropped.png' class='titleAvatar'/>
+        <h1>Angry Sheep Herder</h1>
+        <img src='./images/sheep_transparent_cropped.png' class='titleAvatar'/>
+      </div>
+      <div class='navLinks'>
+        <a href='https://www.linkedin.com/in/conrad-makow-5b218154/'><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        <a href='https://github.com/cmakow'><i class="fa fa-github-square" aria-hidden="true"></i></a>
+      </div>
+    </div>
     <div class='game'>
       <canvas id='canvas' class='game'></canvas>
     </div>
@@ -22,7 +36,7 @@
       </ul>
     </div>
     <div class='footer'>
-      <p>Coded by Conrad Makow. Project repo can be found <a href='https://github.com/cmakow/AngrySheepHerder'>here</a>. <a href='https://cmakow.github.io/'>Personal Site</a>.</p>
+      <p>Game created by Conrad Makow. Project repo can be found <a href='https://github.com/cmakow/AngrySheepHerder'>here</a>.
     </div>
     <script type="application/javascript" src="./lib/bundle.js"></script>
   </body>
