@@ -42,6 +42,19 @@
     <div class='footer'>
       <p>Game created by Conrad Makow. Project repo can be found <a href='https://github.com/cmakow/AngrySheepHerder'>here</a>.
     </div>
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyC9ikSvaT3DJdsgWg92IM8CeFC2xpw-xu8",
+        authDomain: "angrysheepherder-e01da.firebaseapp.com",
+        databaseURL: "https://angrysheepherder-e01da.firebaseio.com",
+        projectId: "angrysheepherder-e01da",
+        storageBucket: "angrysheepherder-e01da.appspot.com",
+        messagingSenderId: "1035584965951"
+      };
+      firebase.initializeApp(config);
+    </script>
     <script type="application/javascript" src="./lib/bundle.js"></script>
   </body>
 </html>
