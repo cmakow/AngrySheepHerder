@@ -94,7 +94,31 @@ a {
 .game {
   display: flex;
   margin: 0 auto;
+	position: relative;
 }
+
+.username-input {
+	position: absolute;
+	left: 195px;
+	top: 350px;
+	width: 240px;
+	padding: 5px;
+	background: none;
+	border: none;
+	font-size: 15px;
+	color: yellow;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	z-index: -1;
+}
+
+.username-input::-webkit-input-placeholder {
+	color: yellow;
+}
+
+.username-input:focus {
+	outline: none;
+}
+
 
 body {
   margin: 0 auto;
