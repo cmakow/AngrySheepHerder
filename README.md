@@ -1,62 +1,73 @@
 # Angry Sheep Herder
 
-### Background
+Angry Sheep Herder is a game used to practice and improve mouse accuracy and/or warmup mouse movements for other games. It is inspired by the game AimBooster. The goal of the game is to click as many sheep as possible without letting 3 sheep escape, or shrink to nothing.
 
-Angry Sheep Herder is a game used to practice and improve mouse accuracy and/or warmup mouse movements for other games.
+![Angry Sheep Herder](./images/screenshots/home_screen.png)
 
-### MVP Features
+[Live](http://conradmakow.com/AngrySheepHerder/)
 
-When playing Angry Sheep Herder, players will be able to:
+## Instructions
 
-- [ ] Start the game in either training mode or challenge mode
-- [ ] Click sheep to increase score, losing when three sheep have not been clicked
-- [ ] Receive an accuracy rating based on how many clicks landed on a sheep
-- [ ] Have a timer to let them know how long they lasted and compare with other players
+To play, simply click to normal or hard mode. The normal mode features stationary targets while the hard mode has the targets moving in random directions at random velocity. If you set a high score, you will be prompted to enter a username and should hit enter to save the high score.
 
-In addition, this project will include:
+## Technologies
 
-- [ ] An About modal describing the background and rules of the game
-- [ ] A production README
+- JavaScript
+- HTML5 Canvas
 
-### Wireframes
+No additional game libraries were used. Everything was implemented through native JavaScript DOM manipulation and HTML5 canvas.
 
-The application is fairly simply represented - everything is on the 640 by 480 canvas, with the settings and score information displayed at the top. The game takes place in an approximately 600 by 420 window inside of the canvas. The training screen has options displayed in 3 by 3 grid, and each of them will follow up with a settings screen to adjust the size, sheep duration, and more depending on the mode.
+## Features and Implementation
 
-Home Screen:
+### Increasing Spawn Rate
 
-![wireframes](Wireframes/SheepClicker.png)
+The sheep spawn at increasing rates as the game goes on due to a `setInterval` that reduces the interval for the spawn rate. Since a `setInterval` always happens at the same interval is started at, even if the interval passed is a variable that changes afterwards, I had to recursively call `setTimeout` with the decreasing interval to get the increasing spawn rate to work. The interval starts at 500 or 0.5 seconds and decreases to 0.25 seconds over 50 seconds. Both of these numbers can be changed quite easily by modifying `endInterval` or `interval` in an options hash when making the new game.
 
-Challenge Screen:
+```JavaScript
+//GameView class
+this.diffInterval = setInterval(this.game.incrementDifficulty, 10000);
 
-![wireframes challenge mode](Wireframes/sheepclicker-challenge.png)
+//Game class
+incrementDifficulty() {
+  if(this.interval === this.endInterval) {
+    return null;
+  } else {
+    this.interval -= 50;
+  }
+}
 
-Training Screen:
+sheepAdder() {
+  this.addSheep(new Sheep({moving: this.moving}));
+  if(this.lives > 0) {
+    setTimeout(this.sheepAdder, this.interval)
+  }
+}
+```
 
-![wireframes training select](Wireframes/sheepclicker-training-modes.png)
+### Difficulty Setting
 
-### Architecture and Technologies
+The difficulty is set through a `moving` boolean in the game class. The click handler is designed on the main menu so that if the user clicks on the hard button, a game is initiated with moving set to true, while if the normal button is clicked, moving is set to false. The `moving` boolean is passed to the sheep as shown in the code snippet above and the sheep check if they are moving before calling the move function. The sheep choose a random direction between zero and 2 PI and this is then converted into x and y increments.
 
-This project will be implemented with the following technologies:
+```JavaScript
+generateRandomDirection() {
+  return (Math.random() * Math.PI * 2) // returns random angle between 0 and 2pi
+}
 
-- `JavaScript` for game logic
-- `Pixi.js` for game rendering
+generateRandomVelocity() {
+  return Math.random() * 3;
+}
 
-In addition to the entry file, there will be three scripts involved in this project:
+this.direction = this.generateRandomDirection();
+this.xInc = this.velocity * Math.cos(this.direction);
+this.yInc = this.velocity * Math.sin(this.direction);
+```
+The velocity is a random number between 0 and 3, which can be modified to make the game more difficult or easy.
 
-`board.js`: this script will handle the logic for creating and removing sheep as they spawn and are clicked, respectively.
+### High Scores
 
-`clicker.js`: this will handle the game logic of when the game is over and update scores.
+The high scores are implemented using a firebase database for persistence. When the game is begun a request is sent to the database to fetch the scores and retain the top 10 to render on the leaderboards. When a game is played, the score result is compared with the lowest score in the high scores and, if it is higher, the user will be prompted to enter their username for the leaderboards or press play again to submit it anonymously. After each score is submitted the scores are re-fetched so that the leaderboards update live.
 
-`sheep.js`: this will be a lightweight script that will house the constructor for the sheep objects and destroy function.
+## Future Features
 
-### Implementation Timeline
-
-**Day 1**: Setup all necessary Node modules and familiarize myself with Pixi. Get basic entry file and bare bones of the three scripts created. Goals:
-- Learn enough Pixi to render objects to the canvas
-- Complete sheep script
-
-**Day 2**: Get more familiar with Pixi, enabling myself to get the board rendered as well as the sheep. In addition, the sheep should be clickable and should be removed when clicked.
-
-**Day 3**: Work on clicker.js to get score, timers, lives, and other necessary features working. By the end of the day I want to have the entire game complete for challenge mode.
-
-**Day 4**: Work on incorporating training modes. Get at least 3 training modes working and allow players to change settings in the training.
+1. Add training modes in which user can input settings and create a different game type.
+2. Add more targets.
