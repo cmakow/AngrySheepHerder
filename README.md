@@ -2,9 +2,9 @@
 
 Angry Sheep Herder is a game used to practice and improve mouse accuracy and/or warmup mouse movements for other games. It is inspired by the game AimBooster. The goal of the game is to click as many sheep as possible without letting 3 sheep escape, or shrink to nothing.
 
-![Angry Sheep Herder](./images/screenshots/home_screen.png)
-
 [Live](http://conradmakow.com/AngrySheepHerder/)
+
+![Angry Sheep Herder](./images/screenshots/home_screen.png)
 
 ## Instructions
 
